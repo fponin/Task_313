@@ -58,24 +58,4 @@ public class UserDaoImpl implements UserDao {
             return null;
         }
     }
-
-//    @Override
-//    @Transactional
-//    public Role getRoleByName(String roleName) {
-//        @SuppressWarnings("unchecked")
-//        List<Role> resultList = entityManager.createQuery("from Role where roleName=?1")
-//                .setParameter(1, roleName)
-//                .getResultList();
-//        if (resultList.size() > 0) {
-//            return resultList.get(0);
-//        } else {
-//            return null;
-//        }
-//    }
-//
-//    @Override
-//    @Transactional
-//    public List<Role> getAllRole() {
-//        return entityManager.createQuery("from Role", Role.class).getResultList();
-//    }
 }

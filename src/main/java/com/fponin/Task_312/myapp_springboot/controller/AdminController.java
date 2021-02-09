@@ -61,22 +61,6 @@ public class AdminController {
         return "delete-user :: delete-user";
     }
 
-    //Сохранить @User
-//    @GetMapping(value = "/addNewUser")
-//    public String addNewUsers(Model model) {
-//        User user = new User();
-//        user.addRoletoUser(roleService.getRoleByName("ROLE_USER"));
-//        model.addAttribute("roles", roleService.getAllRole());
-//        model.addAttribute("user", user);
-//        return "user";
-//    }
-
-    //    @GetMapping(value = "/user/{id}")
-//    public String getUsers(@PathVariable("id") int id, Model model) {
-//        model.addAttribute("user", userService.findUser(id));
-//        model.addAttribute("roles", roleService.getAllRole());
-//        return "edit-user :: edituser";
-//    }
     @GetMapping(value = "/edit-user/{id}")
     public String editUserModal(@PathVariable("id") int id, ModelMap model) {
         model.addAttribute("user", userService.findUser(id));

@@ -26,13 +26,13 @@
                     </div>
                     <div class="mb-3">
                         <label for="inputRoles" style="font-weight:bold">Select Roles:</label>
-                            <select multiple name="role" th:required="true" id="inputRoles" class="form-control mb-2 col-2">
-                                <option th:each="role : ${roles}"
-                                        th:value="${role.getRoleName()}"
-                                        th:utext="${role.getRoleName()}"
-                                        th:selected="${#lists.contains(user.roles, role)}">
-                                </option>
-                            </select>
+                        <select multiple name="role" th:required="true" id="inputRoles" class="form-control mb-2 col-2">
+                            <option th:each="role : ${roles}"
+                                    th:value="${role.getRoleName()}"
+                                    th:utext="${role.getRoleName()}"
+                                    th:selected="${#lists.contains(user.roles, role)}">
+                            </option>
+                        </select>
                     </div>
                     <div class="modal-footer">
                         <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>

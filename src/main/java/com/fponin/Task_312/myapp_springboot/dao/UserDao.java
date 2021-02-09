@@ -18,8 +18,4 @@ public interface UserDao {
     void deleteUser(int id);
 
     User getUserByName(String name);
-
-//    Role getRoleByName(String roleName);
-//
-//    List<Role> getAllRole();
 }
