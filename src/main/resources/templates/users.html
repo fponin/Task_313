@@ -19,9 +19,9 @@
             <!--    Sidebar     -->
             <div class="col-2 p-0 h-100">
                 <div class="nav flex-column nav-pills">
-                    <a class="nav-link active" id="v-pills-home-tab" data-bs-toggle="pill" href="#Admin" role="tab"
+                    <a class="nav-link active" id="v-pills-home-tab" data-toggle="pill" href="#Admin" role="tab"
                        aria-controls="v-pills-home" aria-selected="true">Admin</a>
-                    <a class="nav-link" id="v-pills-profile-tab" data-bs-toggle="pill" href="#User" role="tab"
+                    <a class="nav-link" id="v-pills-profile-tab" data-toggle="pill" href="#User" role="tab"
                        aria-controls="v-pills-profile" aria-selected="false">User</a>
                 </div>
             </div>
@@ -111,57 +111,57 @@
     </div>
 
     <!-- Modal Edit-->
-        <div class="modal fade" id="staticBackdropEdit" data-backdrop="static"
-             data-keyboard="false" tabindex="-1" role="dialog" aria-labelledby="staticBackdropLabelEdit"
-             aria-hidden="true">
-            <div class="modal-dialog">
-                <div class="modal-content">
-                    <div class="modal-header">
-                        <h5 class="modal-title" id="staticBackdropLabelEdit">Edit user</h5>
-                    </div>
-                    <div class="modal-body">
-                        <div class="row justify-content-md-center">
-                            <form class="col-5 text-center" id="editForm">
-                                <div class="row">
-                                    <div class="col">
-                                        <fieldset disabled>
-                                            <div class="form-group">
-                                                <label for="disabledTextInput"><strong>Id</strong></label>
-                                                <input type="text" id="disabledTextInput" class="form-control">
-                                            </div>
-                                        </fieldset>
+    <div class="modal fade" id="staticBackdropEdit" data-backdrop="static"
+         data-keyboard="false" tabindex="-1" role="dialog" aria-labelledby="staticBackdropLabelEdit"
+         aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="staticBackdropLabelEdit">Edit user</h5>
+                </div>
+                <div class="modal-body">
+                    <div class="row justify-content-md-center">
+                        <form class="col-6 text-center" id="editForm">
+                            <div class="row">
+                                <div class="col">
+                                    <fieldset disabled>
                                         <div class="form-group">
-                                            <label><strong>Name</strong></label>
-                                            <input type="text" class="form-control" id="editName">
+                                            <label for="disabledTextInput"><strong>Id</strong></label>
+                                            <input type="text" id="disabledTextInput" class="form-control">
                                         </div>
-                                        <div class="form-group">
-                                            <label><strong>Email</strong></label>
-                                            <input type="text" class="form-control" id="editEmail">
-                                        </div>
-                                        <div class="form-group">
-                                            <label><strong>Password</strong></label>
-                                            <input type="password" class="form-control" plaplaceholder="Password"
-                                                   id="editPassword" name="password">
-                                        </div>
-                                        <div class="form-group">
-                                            <label for="exampleFormControlSelectEdit"><strong>Role</strong></label>
-                                            <select multiple class="form-control" id="exampleFormControlSelectEdit"
-                                                    size="2"
-                                                    name="editRoles">
-                                            </select>
-                                        </div>
+                                    </fieldset>
+                                    <div class="form-group">
+                                        <label><strong>Name</strong></label>
+                                        <input type="text" class="form-control" id="editName">
+                                    </div>
+                                    <div class="form-group">
+                                        <label><strong>Email</strong></label>
+                                        <input type="text" class="form-control" id="editEmail">
+                                    </div>
+                                    <div class="form-group">
+                                        <label><strong>Password</strong></label>
+                                        <input type="password" class="form-control" plaplaceholder="Password"
+                                               id="editPassword" name="password">
+                                    </div>
+                                    <div class="form-group">
+                                        <label for="exampleFormControlSelectEdit"><strong>Role</strong></label>
+                                        <select multiple class="form-control" id="exampleFormControlSelectEdit"
+                                                size="2"
+                                                name="editRoles">
+                                        </select>
                                     </div>
                                 </div>
-                            </form>
-                        </div>
+                            </div>
+                        </form>
                     </div>
-                    <div class="modal-footer">
-                        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-                        <button type="submit" class="btn btn-primary" data-btn="submitEdit">Edit</button>
-                    </div>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                    <button type="submit" class="btn btn-primary" data-btn="submitEdit">Edit</button>
                 </div>
             </div>
         </div>
+    </div>
     <!-- Modal Delete-->
     <div class="modal fade" id="staticBackdropDelete" data-backdrop="static"
          data-keyboard="false" tabindex="-1" role="dialog" aria-labelledby="staticBackdropLabelDelete"
@@ -225,6 +225,7 @@
         crossorigin="anonymous"></script>
 
 <script type="text/javascript" th:src="@{../js/main.js}"></script>
+<script type="text/javascript" th:src="@{../js/PrincipalInfo.js}"></script>
 <script type="text/javascript" th:src="@{../js/addNewUser.js}"></script>
 
 </body>

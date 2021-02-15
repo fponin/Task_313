@@ -45,9 +45,9 @@ public class RestAdminController {
     public ResponseEntity<User> deleteUsers(@PathVariable("id") int id) {
         try {
             userService.deleteUser(id);
-            return new ResponseEntity<User>(userService.findUser(id), HttpStatus.OK);
+            return new ResponseEntity<>(userService.findUser(id), HttpStatus.OK);
         } catch (NoSuchElementException e) {
-            return new ResponseEntity<User>(HttpStatus.NOT_FOUND);
+            return new ResponseEntity<>(HttpStatus.NOT_FOUND);
         }
     }
 
