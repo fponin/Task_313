@@ -1,22 +1,23 @@
-package com.fponin.Task_312.myapp_springboot.model;
+package com.fponin.Task_313.myapp_springboot.model;
 
 import org.springframework.security.core.GrantedAuthority;
 
 import javax.persistence.*;
+import java.io.Serializable;
 import java.util.HashSet;
 import java.util.Objects;
 import java.util.Set;
 
 @Entity
 @Table(name = "roles")
-public class Role implements GrantedAuthority {
+public class Role implements GrantedAuthority, Serializable {
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
     private int id;
 
     @Column(name = "role")
-    private String roleName;
-
+    private String name;
+    @Transient
     @ManyToMany(mappedBy = "roles")
     private Set<User> users;
 
@@ -36,12 +37,12 @@ public class Role implements GrantedAuthority {
         this.id = id;
     }
 
-    public String getRoleName() {
-        return roleName;
+    public String getName() {
+        return name;
     }
 
-    public void setRoleName(String role_name) {
-        this.roleName = role_name;
+    public void setName(String role_name) {
+        this.name = role_name;
     }
 
     public void addUsertoRole(User user) {
@@ -55,14 +56,14 @@ public class Role implements GrantedAuthority {
     public Role() {
     }
 
-    public Role(int id, String roleName) {
+    public Role(int id, String name) {
         this.id = id;
-        this.roleName = roleName;
+        this.name = name;
     }
 
     @Override
     public String getAuthority() {
-        return roleName;
+        return name;
     }
 
     @Override
@@ -70,16 +71,16 @@ public class Role implements GrantedAuthority {
         if (this == o) return true;
         if (o == null || getClass() != o.getClass()) return false;
         Role role = (Role) o;
-        return Objects.equals(roleName, role.roleName);
+        return Objects.equals(name, role.name);
     }
 
     @Override
     public int hashCode() {
-        return Objects.hash(roleName);
+        return Objects.hash(name);
     }
 
     @Override
     public String toString() {
-        return roleName.toLowerCase();
+        return name.toLowerCase();
     }
 }

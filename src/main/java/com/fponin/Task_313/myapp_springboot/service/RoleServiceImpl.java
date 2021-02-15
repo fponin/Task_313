@@ -1,7 +1,7 @@
-package com.fponin.Task_312.myapp_springboot.service;
+package com.fponin.Task_313.myapp_springboot.service;
 
-import com.fponin.Task_312.myapp_springboot.dao.RoleDao;
-import com.fponin.Task_312.myapp_springboot.model.Role;
+import com.fponin.Task_313.myapp_springboot.dao.RoleDao;
+import com.fponin.Task_313.myapp_springboot.model.Role;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;

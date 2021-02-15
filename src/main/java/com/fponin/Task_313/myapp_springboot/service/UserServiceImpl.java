@@ -1,9 +1,9 @@
-package com.fponin.Task_312.myapp_springboot.service;
+package com.fponin.Task_313.myapp_springboot.service;
 
 
-import com.fponin.Task_312.myapp_springboot.dao.UserDao;
-import com.fponin.Task_312.myapp_springboot.model.Role;
-import com.fponin.Task_312.myapp_springboot.model.User;
+import com.fponin.Task_313.myapp_springboot.dao.UserDao;
+import com.fponin.Task_313.myapp_springboot.model.Role;
+import com.fponin.Task_313.myapp_springboot.model.User;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.security.core.GrantedAuthority;
 import org.springframework.security.core.authority.SimpleGrantedAuthority;
@@ -79,7 +79,7 @@ public class UserServiceImpl implements UserService, UserDetailsService {
 
         Set<GrantedAuthority> grantedAuthorities = new HashSet<>();
         for (Role role : user.getRoles()) {
-            grantedAuthorities.add(new SimpleGrantedAuthority(role.getRoleName()));
+            grantedAuthorities.add(new SimpleGrantedAuthority(role.getName()));
         }
         return new org.springframework.security.core.userdetails.User(user.getUsername(), user.getPassword(), grantedAuthorities);
     }

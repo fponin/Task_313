@@ -1,6 +1,6 @@
-package com.fponin.Task_312.myapp_springboot.service;
+package com.fponin.Task_313.myapp_springboot.service;
 
-import com.fponin.Task_312.myapp_springboot.model.User;
+import com.fponin.Task_313.myapp_springboot.model.User;
 
 import java.util.List;
 

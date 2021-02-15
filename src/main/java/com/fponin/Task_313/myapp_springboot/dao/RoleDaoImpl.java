@@ -1,6 +1,6 @@
-package com.fponin.Task_312.myapp_springboot.dao;
+package com.fponin.Task_313.myapp_springboot.dao;
 
-import com.fponin.Task_312.myapp_springboot.model.Role;
+import com.fponin.Task_313.myapp_springboot.model.Role;
 import org.springframework.stereotype.Repository;
 import org.springframework.transaction.annotation.Transactional;
 

@@ -1,4 +1,4 @@
-package com.fponin.Task_312.myapp_springboot.security;
+package com.fponin.Task_313.myapp_springboot.security;
 
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
